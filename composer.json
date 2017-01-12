@@ -1,0 +1,27 @@
+{
+    "name": "media-adgo/api-cabroz",
+    "type": "project",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Alejandro Sosa",
+            "email": "alejandro.sosa@advertising-go.es"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "monolog/monolog": "^1.22",
+        "php-curl-class/php-curl-class": "^7.1"
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.2",
+        "codeception/specify": "*",
+        "codeception/verify": "*",
+        "codeception/mockery-module": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MediaAdgo\\": "src/"
+        }
+    }
+}
