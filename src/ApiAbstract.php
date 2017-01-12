@@ -54,7 +54,7 @@ abstract class ApiAbstract
 	/**
 	 * ApiAbstract constructor.
 	 *
-	 * @param \Curl\Curl|null $curl
+	 * @param Curl|null $curl
 	 */
 	public function __construct(Curl $curl = null)
 	{
@@ -68,7 +68,7 @@ abstract class ApiAbstract
 	 * @param $apiVersion
 	 * @param $apiClient
 	 */
-	abstract protected function setSettings($apiUrl, $apiKey, $apiVersion, $apiClient = self::CLIENT);
+	abstract public function setSettings($apiUrl, $apiKey, $apiVersion, $apiClient = self::CLIENT);
 
 	/**
 	 * Set headers
@@ -87,7 +87,7 @@ abstract class ApiAbstract
 	 * @param array $order
 	 * @return mixed
 	 */
-	abstract protected function sendOrderData(array $order = array());
+	abstract public function sendOrder(array $order = array());
 
 	/**
 	 * Create a token
@@ -100,7 +100,7 @@ abstract class ApiAbstract
 	 * @param array $post
 	 * @return string
 	 */
-	public function buildQuery(array $post = array())
+	protected function buildQuery(array $post = array())
 	{
 		if(empty($post)){
 			return '';

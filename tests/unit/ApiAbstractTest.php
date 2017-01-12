@@ -61,9 +61,9 @@ class ApiAbstractTest extends \Codeception\Test\Unit
 	 * @param $class ReflectionClass
 	 * @dataProvider apiAbtractProvider
 	 */
-    public function hasMethodSendData($class)
+    public function hasMethodSend($class)
     {
-    	$this->assertEquals('sendOrderData', $class->getMethod('sendOrderData')->name);
+    	$this->assertEquals('sendOrder', $class->getMethod('sendOrder')->name);
     }
 
 	/**
